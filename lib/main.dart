@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/tabScreen.dart';
 import './screens/category_meals_screen.dart';
 import './screens/categories_screen.dart';
 import './screens/mea_detail_screen.dart';
@@ -27,8 +28,10 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'RobotoCondensed',
                 fontWeight: FontWeight.bold,
               ))),
-      home: CategoriesScreen(),
+      //home: CategoriesScreen(),
+      initialRoute: '/',
       routes: {
+        '/':(ctx) => TabsScreen(),
         CategoryMealScreen.routeName: (ctx) => CategoryMealScreen(),
         MealDetailScreen.routeName: (ctt) => MealDetailScreen(),
       },
